@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="icon.jpg">
+    <title>Sobat Sepatu</title>
+    <link rel="stylesheet" href="style.css
+    ">
+</head>
+<body>
+    <!--Navbar Section-->
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#"><img src="icon.jpg" alt=""></a></div>
+        
+            <ul class="links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#home">Tentang</a></li>
+                <li><a href="#home">Paket</a></li>
+                <li><a href="#home">Lokasi</a></li>
+            </ul>
+            <a href="#" class="contact-btn">Contact</a>
+
+            <!--Toogle Section-->
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#home">Tentang</a></li>
+            <li><a href="#home">Paket</a></li>
+            <li><a href="#home">Lokasi</a></li>
+            <li><a href="#" class="contact-btn">Contact</a></li>
+        </div>
+    </header>
+    <!--Home Section-->
+    <main>
+        <section id="home">
+            <h4>Selamat Datang Di:</h4>
+            <h1>Sobat Sepatu</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                Neque consequuntur obcaecati possimus ad doloremque. <br>
+                Excepturi aspernatur dignissimos nam natus eius!</p>
+        </section>
+    </main>
+    <!--Javascript-->
+    <script src="https://kit.fontawesome.com/a6f2e5c6b3.js" crossorigin="anonymous"></script>
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn');
+        const toggleBtnIcon = document.querySelector('.toggle-btn i');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+
+        toggleBtn.onclick  = function (){
+            dropdownMenu.classList.toggle('open')
+            const isOpen = dropdownMenu.classList.contains('open');
+
+            toggleBtnIcon.className = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html>
